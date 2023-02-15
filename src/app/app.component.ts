@@ -1,4 +1,5 @@
 import { Component,OnInit  } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { RESTAPIServiceService } from './restapiservice.service';
 
 @Component({
@@ -9,9 +10,11 @@ import { RESTAPIServiceService } from './restapiservice.service';
 export class AppComponent implements OnInit   {
 
 
-  repos:any
-  title = 'MovieApp';
-  constructor(private service:RESTAPIServiceService) {}
+  repos:any;
+  constructor(private service:RESTAPIServiceService,
+    private title: Title) {
+      title.setTitle('MoveApp');
+    }
 
   ngOnInit(): void {
     this.getProducts()
