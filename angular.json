@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "dist/movie-app-web",
             "index": "src/app/app.component.html",
-            "main": "src/main.ts",
+            "main": "src/app/appcomponent.ts",
             "polyfills": [
               "zone.js"
             ],
